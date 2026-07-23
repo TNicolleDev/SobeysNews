@@ -7,137 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../static/css/home.css">
-<style>
-  /* Article-page-only layout, on top of the shared styles.css */
-  .article-wrap{
-    max-width:760px;
-    margin:0 auto;
-    padding:0 6vw 60px;
-  }
-  .article-head{
-    padding:40px 0 24px;
-    border-bottom:1px solid var(--line);
-  }
-  .breadcrumb{
-    font-size:0.72rem;
-    letter-spacing:0.08em;
-    text-transform:uppercase;
-    color:var(--concrete);
-    margin-bottom:16px;
-  }
-  .breadcrumb a:hover{color:var(--dock-blue); text-decoration:underline;}
-  .article-tag{
-    display:inline-block;
-    background:var(--alert-red);
-    color:#fff;
-    font-family:'Oswald',sans-serif;
-    font-size:0.72rem;
-    letter-spacing:0.1em;
-    padding:4px 10px;
-    margin-bottom:14px;
-  }
-  .article-head h1{
-    font-size:clamp(1.8rem,4vw,2.6rem);
-    line-height:1.1;
-    margin-bottom:14px;
-  }
-  .dek{
-    font-size:1rem;
-    color:#4a4a44;
-    line-height:1.6;
-    margin-bottom:18px;
-  }
-  .byline-row{
-    display:flex;
-    justify-content:space-between;
-    flex-wrap:wrap;
-    gap:10px;
-    font-size:0.72rem;
-    color:var(--concrete);
-    text-transform:uppercase;
-    letter-spacing:0.06em;
-  }
-  .article-body{
-    padding:32px 0;
-    font-size:0.95rem;
-    line-height:1.75;
-    color:#2a2a26;
-  }
-  .article-body p{margin-bottom:20px;}
-  .pullquote{
-    border-left:4px solid var(--safety-yellow);
-    background:var(--concrete-light);
-    padding:20px 26px;
-    margin:28px 0;
-    font-family:'Oswald', sans-serif;
-    font-size:1.15rem;
-    line-height:1.4;
-    color:var(--ink);
-  }
-  .pullquote span{
-    display:block;
-    margin-top:10px;
-    font-family:'IBM Plex Mono', monospace;
-    font-size:0.68rem;
-    letter-spacing:0.08em;
-    text-transform:uppercase;
-    color:var(--concrete);
-  }
-  .status-cards{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:1px;
-    background:var(--line);
-    margin:28px 0;
-  }
-  .status-card{
-    background:var(--ink);
-    color:var(--paper);
-    padding:18px 20px;
-  }
-  .status-card .label{
-    font-family:'Oswald',sans-serif;
-    font-size:0.7rem;
-    letter-spacing:0.08em;
-    color:var(--safety-yellow);
-    margin-bottom:6px;
-  }
-  .status-card .value{font-size:0.85rem;}
-  .tags-row{
-    display:flex;
-    gap:10px;
-    flex-wrap:wrap;
-    margin-top:30px;
-    padding-top:20px;
-    border-top:1px solid var(--line);
-  }
-  .tag-chip{
-    font-size:0.68rem;
-    letter-spacing:0.06em;
-    text-transform:uppercase;
-    background:var(--concrete-light);
-    padding:5px 10px;
-    color:#4a4a44;
-  }
-  .related{
-    margin-top:44px;
-    padding-top:24px;
-    border-top:3px solid var(--ink);
-  }
-  .related h2{font-size:1rem; margin-bottom:16px;}
-  .related-list{list-style:none;}
-  .related-list li{
-    padding:10px 0;
-    border-bottom:1px dashed var(--line);
-    font-size:0.85rem;
-  }
-  .related-list li:last-child{border-bottom:none;}
-  .related-list a:hover{color:var(--dock-blue); text-decoration:underline;}
-
-  @media (max-width:600px){
-    .status-cards{grid-template-columns:1fr;}
-  }
-</style>
+<link rel="stylesheet" href="../static/css/frozen.css">
 </head>
 <body>
 
@@ -154,7 +24,7 @@
     </div>
   </div>
   <nav>
-    <a href="#">News</a>
+    <a href="{{url_for('home')}}">News</a>
     <a href="#">Dock Drama</a>
     <a href="#">Rumor Mill</a>
     <a href="#">Sightings</a>
