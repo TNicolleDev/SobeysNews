@@ -1,0 +1,288 @@
+ :root{
+    --safety-yellow:#F4B400;
+    --ink:#181818;
+    --concrete:#8c8c86;
+    --concrete-light:#e7e5dd;
+    --paper:#f2f0e8;
+    --dock-blue:#26333f;
+    --alert-red:#b7391f;
+    --line:#c9c6ba;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Mono', monospace;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Oswald', sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.02em;
+  }
+  a{color:inherit;text-decoration:none;}
+
+  /* ===== hazard stripe utility ===== */
+  .hazard{
+    background:repeating-linear-gradient(45deg,
+      var(--ink), var(--ink) 12px,
+      var(--safety-yellow) 12px, var(--safety-yellow) 24px);
+    height:8px;
+  }
+
+  /* ===== header ===== */
+  header{
+    background:var(--dock-blue);
+    color:var(--paper);
+    padding:28px 6vw 22px;
+    border-bottom:4px solid var(--safety-yellow);
+  }
+  .masthead{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    flex-wrap:wrap;
+    gap:16px;
+  }
+  .logo-block h1{
+    font-size:clamp(2.2rem, 5vw, 3.4rem);
+    font-weight:700;
+    line-height:0.95;
+  }
+  .logo-block h1 span{color:var(--safety-yellow);}
+  .logo-sub{
+    margin-top:8px;
+    font-size:0.78rem;
+    letter-spacing:0.12em;
+    color:#c7cdd2;
+    text-transform:uppercase;
+  }
+  .manifest-id{
+    text-align:right;
+    font-size:0.72rem;
+    color:#8fa0ac;
+    line-height:1.6;
+    text-transform:uppercase;
+  }
+  nav{
+    margin-top:20px;
+    display:flex;
+    gap:26px;
+    flex-wrap:wrap;
+    border-top:1px solid #3c4a56;
+    padding-top:14px;
+  }
+  nav a{
+    font-family:'Oswald', sans-serif;
+    font-size:0.85rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:#dfe4e7;
+    padding-bottom:4px;
+    border-bottom:2px solid transparent;
+    transition:border-color .15s ease, color .15s ease;
+  }
+  nav a:hover{color:var(--safety-yellow); border-color:var(--safety-yellow);}
+
+  /* ===== ticker board (signature element) ===== */
+  .ticker-wrap{
+    background:var(--ink);
+    overflow:hidden;
+    white-space:nowrap;
+    border-bottom:2px solid var(--safety-yellow);
+  }
+  .ticker{
+    display:inline-block;
+    padding:10px 0;
+    animation:scroll 32s linear infinite;
+    color:var(--safety-yellow);
+    font-size:0.82rem;
+    letter-spacing:0.04em;
+  }
+  .ticker span{margin-right:60px;}
+  .ticker b{color:#fff; background:var(--alert-red); padding:2px 8px; margin-right:10px; font-family:'Oswald',sans-serif;}
+  @keyframes scroll{
+    0%{transform:translateX(0);}
+    100%{transform:translateX(-50%);}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .ticker{animation:none;}
+  }
+
+  /* ===== layout ===== */
+  main{max-width:1180px; margin:0 auto; padding:0 6vw;}
+
+  /* ===== hero ===== */
+  .hero{
+    display:grid;
+    grid-template-columns:1.3fr 1fr;
+    gap:40px;
+    padding:44px 0 36px;
+    border-bottom:1px solid var(--line);
+  }
+  .hero-tag{
+    display:inline-block;
+    background:var(--alert-red);
+    color:#fff;
+    font-family:'Oswald',sans-serif;
+    font-size:0.72rem;
+    letter-spacing:0.1em;
+    padding:4px 10px;
+    margin-bottom:14px;
+  }
+  .hero h2{
+    font-size:clamp(1.8rem,3.6vw,2.9rem);
+    line-height:1.05;
+    margin-bottom:16px;
+  }
+  .hero h2 a:hover{color:var(--dock-blue);}
+  .hero p{color:#4a4a44; font-size:0.95rem; line-height:1.6; max-width:52ch;}
+  .hero-meta{
+    margin-top:18px;
+    font-size:0.72rem;
+    color:var(--concrete);
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+  }
+  .dock-card{
+    background:var(--ink);
+    color:var(--paper);
+    padding:22px;
+    font-size:0.8rem;
+    position:relative;
+  }
+  .dock-card::before{
+    content:"";
+    position:absolute; top:0; left:0; right:0; height:6px;
+    background:repeating-linear-gradient(90deg, var(--safety-yellow) 0 16px, var(--ink) 16px 20px);
+  }
+  .dock-card h3{
+    font-size:0.95rem;
+    color:var(--safety-yellow);
+    margin:14px 0 10px;
+  }
+  .dock-card ul{list-style:none;}
+  .dock-card li{
+    padding:7px 0;
+    border-bottom:1px dashed #3d3d38;
+    display:flex; justify-content:space-between; gap:10px;
+  }
+  .dock-card li:last-child{border-bottom:none;}
+  .dock-card li span.bay{color:var(--concrete); font-size:0.72rem;}
+
+  /* ===== section headers ===== */
+  .section-head{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    margin:38px 0 18px;
+    padding-bottom:8px;
+    border-bottom:3px solid var(--ink);
+  }
+  .section-head h2{font-size:1.3rem;}
+  .section-head .stamp{
+    font-size:0.7rem;
+    color:var(--concrete);
+    letter-spacing:0.08em;
+  }
+
+  /* ===== story grid ===== */
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1px;
+    background:var(--line);
+    margin-bottom:10px;
+  }
+  .card{
+    background:var(--paper);
+    padding:22px;
+    transition:background .15s ease;
+  }
+  .card:hover{background:var(--concrete-light);}
+  .card .cat{
+    font-family:'Oswald',sans-serif;
+    font-size:0.68rem;
+    letter-spacing:0.1em;
+    color:var(--alert-red);
+    margin-bottom:8px;
+  }
+  .card h3{
+    font-size:1.02rem;
+    line-height:1.25;
+    margin-bottom:10px;
+  }
+  .card h3 a:hover{text-decoration:underline; text-decoration-color:var(--safety-yellow); text-decoration-thickness:3px;}
+  .card p{font-size:0.82rem; color:#54544d; line-height:1.55;}
+  .card .byline{
+    margin-top:12px;
+    font-size:0.68rem;
+    color:var(--concrete);
+    text-transform:uppercase;
+  }
+
+  /* ===== sidebar-style rumor mill row ===== */
+  .rumor-row{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:1px;
+    background:var(--line);
+    margin-bottom:40px;
+  }
+  .rumor-item{
+    background:#fffef9;
+    padding:18px 22px;
+    display:flex;
+    gap:14px;
+    align-items:flex-start;
+  }
+  .rumor-item .tag-lvl{
+    font-family:'Oswald',sans-serif;
+    background:var(--safety-yellow);
+    color:var(--ink);
+    font-size:0.68rem;
+    padding:3px 8px;
+    white-space:nowrap;
+    margin-top:2px;
+  }
+  .rumor-item p{font-size:0.85rem;}
+  .rumor-item a:hover{color:var(--dock-blue); text-decoration:underline;}
+
+  footer{
+    background:var(--ink);
+    color:#98988f;
+    padding:32px 6vw;
+    margin-top:20px;
+    font-size:0.72rem;
+    line-height:1.7;
+  }
+  footer .foot-top{
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:20px;
+    border-bottom:1px solid #333;
+    padding-bottom:16px;
+    margin-bottom:16px;
+  }
+  footer strong{color:var(--safety-yellow); font-family:'Oswald',sans-serif;}
+
+  @media (max-width:860px){
+    .hero{grid-template-columns:1fr;}
+    .grid{grid-template-columns:1fr;}
+    .rumor-row{grid-template-columns:1fr;}
+  }
+
+  .article-figure{
+  margin:28px 0;
+}
+.article-figure img{
+  width:100%;
+  height:auto;
+  display:block;
+  border:1px solid var(--line);
+}
+.article-figure figcaption{
+  font-size:0.72rem;
+  color:var(--concrete);
+  text-transform:uppercase;
+  letter-spacing:0.05em;
+  margin-top:8px;
+}
