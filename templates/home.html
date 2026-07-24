@@ -6,7 +6,7 @@
 <title>DOCK 8265 — News, Rumors & Drama from the David Sobey RSC</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../static/css/home.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
 </head>
 <body>
 
@@ -33,14 +33,14 @@
 
 <div class="ticker-wrap">
   <div class="ticker">
-    <span><b>BREAKING</b> Conveyor Bay 14 achieves longest uninterrupted run in facility history</span>
-    <span><b>UPDATE</b> Night shift rumor mill claims a fourth robotic picker arm has been "named"</span>
-    <span><b>DEVELOPING</b> Loading dock 22 door dispute reportedly resolved by committee vote</span>
-    <span><b>SOURCES SAY</b> New signage in the break room sparks quiet controversy</span>
-    <span><b>BREAKING</b> Conveyor Bay 14 achieves longest uninterrupted run in facility history</span>
-    <span><b>UPDATE</b> Night shift rumor mill claims a fourth robotic picker arm has been "named"</span>
-    <span><b>DEVELOPING</b> Loading dock 22 door dispute reportedly resolved by committee vote</span>
-    <span><b>SOURCES SAY</b> New signage in the break room sparks quiet controversy</span>
+    <span><b>BREAKING</b> Productivity jokes about Team Leads are making the rounds again.</span>
+    <span><b>UPDATE</b> Barrels are back in the spotlight as strike rumours continue.</span>
+    <span><b>DEVELOPING</b> The annual "least eligible bachelor" joke refuses to die.</span>
+    <span><b>SOURCES SAY</b> The search for the next union steward has become this week's hottest debate.</span>
+    <span><b>BREAKING</b> Another heated discussion about union protections spread across the floor today.</span>
+    <span><b>UPDATE</b> Night shift break-room stories are once again fueling warehouse gossip.</span>
+    <span><b>DEVELOPING</b> Opinions remain divided on former union leadership.</span>
+    <span><b>SOURCES SAY</b> Workplace flirting continues to be a frequent topic of conversation.</span>
   </div>
 </div>
 
@@ -49,20 +49,20 @@
   <section class="hero">
     <div>
       <span class="hero-tag">Lead Story</span>
-      <h2><a href="#">Inside the Automation Wing: What Really Happens After the Lights Go Down</a></h2>
-      <p>Multiple sources inside the Retail Support Centre describe a night cycle unlike anything on the day floor — quieter, faster, and reportedly the subject of more internal speculation than any other shift in the building's history.</p>
+      <h2><a href="{{ url_for('frozen_in_time') }}">"Frozen in Time": TL Describes Ernest and Orlando's Extended Phone Stare</a></h2>
+      <p>Two names are circulating on the floor this week after a team lead's offhand comment turned a routine observation into the building's newest running story.</p>
       <div class="hero-meta">Filed under News · 6 min read · Updated today</div>
     </div>
     <div class="dock-card">
-      <div style="font-family:'Oswald',sans-serif; font-size:0.8rem; letter-spacing:0.08em; color:#fff;">TODAY'S MANIFEST</div>
-      <h3>Trending on the floor</h3>
-      <ul>
-        <li><a href="#">Andrew Laing is a sex pest.</a><span class="bay">Day shift</span></li>
-        <li><a href="#">Too much crap left on the floor in receiving.</a><span class="bay">Afternoons</span></li>
-        <li><a href="#">A rumored fourth shift: fact or floor talk?</a><span class="bay">Nights</span></li>
-        <li><a href="#">How to steal without getting caught.</a><span class="bay">Days</span></li>
-      </ul>
-    </div>
+  <div style="font-family:'Oswald',sans-serif; font-size:0.8rem; letter-spacing:0.08em; color:#fff;">TODAY'S MANIFEST</div>
+  <h3>Trending on the floor</h3>
+  <ul>
+    <li><a href="{{ url_for('workplace_romance_rumor') }}">Another workplace romance rumor has everyone talking.</a><span class="bay">Day Shift</span></li>
+    <li><a href="{{ url_for('receiving_floor_clutter') }}">Receiving floor clutter sparks another round of complaints.</a><span class="bay">Afternoons</span></li>
+    <li><a href="{{ url_for('mandatory_overtime_debate') }}">Mandatory overtime continues to dominate break-room conversations.</a><span class="bay">Nights</span></li>
+    <li><a href="{{ url_for('loss_prevention_reminders') }}">Loss prevention reminders return after recent inventory concerns.</a><span class="bay">Days</span></li>
+  </ul>
+</div>
   </section>
 
   <div id="news" class="section-head">
@@ -78,13 +78,13 @@
     </div>
     <div class="card">
       <div class="cat">Operations</div>
-      <h3><a href="#">New Shift Rotation Draws Mixed Reactions on the Floor</a></h3>
+      <h3><a href="{{ url_for('new_shift_rotation') }}">New Shift Rotation Draws Mixed Reactions on the Floor</a></h3>
       <p>Workers describe the adjusted rotation as either a welcome change or an unnecessary shake-up, depending entirely on who you ask.</p>
       <div class="byline">Staff Report</div>
     </div>
     <div class="card">
       <div class="cat">Community</div>
-      <h3><a href="#">Vaughan Council Discusses Traffic Near Huntington Road</a></h3>
+      <h3><a href="{{ url_for('vaughan_council_traffic') }}">Vaughan Council Discusses Traffic Near Huntington Road</a></h3>
       <p>Local officials weigh in on truck volume around the facility as delivery schedules continue to expand.</p>
       <div class="byline">Staff Report</div>
     </div>
@@ -97,19 +97,19 @@
   <div class="grid">
     <div class="card">
       <div class="cat">Feud Watch</div>
-      <h3><a href="#">The Great Break Room Fridge Standoff Enters Week Three</a></h3>
+      <h3><a href="{{ url_for('fridge_standoff') }}">The Great Break Room Fridge Standoff Enters Week Three</a></h3>
       <p>What started as a labeling dispute has reportedly escalated into a full-blown seating chart realignment.</p>
       <div class="byline">Anonymous Tip</div>
     </div>
     <div class="card">
       <div class="cat">Escalation</div>
-      <h3><a href="#">Two Supervisors, One Whiteboard: The Schedule Dispute No One Will Explain</a></h3>
+      <h3><a href="{{ url_for('whiteboard_schedule_dispute') }}">Two Supervisors, One Whiteboard: The Schedule Dispute No One Will Explain</a></h3>
       <p>Sources describe a quiet but unmistakable tension over whose handwriting gets to stay on the board.</p>
       <div class="byline">Anonymous Tip</div>
     </div>
     <div class="card">
       <div class="cat">Fallout</div>
-      <h3><a href="#">Who Approved the New Parking Layout? No One Is Owning Up</a></h3>
+      <h3><a href="{{ url_for('parking_layout_fallout') }}">Who Approved the New Parking Layout? No One Is Owning Up</a></h3>
       <p>The repainted lines have shifted more than just cars — reportedly a few long-standing alliances too.</p>
       <div class="byline">Anonymous Tip</div>
     </div>
@@ -122,19 +122,19 @@
   <div class="rumor-row">
     <div class="rumor-item">
       <span class="tag-lvl">LOW CONFIDENCE</span>
-      <p><a href="#">Word going around suggests a fifth automated wing could be added by next year — nothing official yet.</a></p>
+      <p><a href="{{ url_for('fifth_automated_wing') }}">Word going around suggests a fifth automated wing could be added by next year — nothing official yet.</a></p>
     </div>
     <div class="rumor-item">
       <span class="tag-lvl">GROWING</span>
-      <p><a href="#">Multiple night-shift accounts describe the same unexplained hum near Bay 9. Facilities has not commented.</a></p>
+      <p><a href="{{ url_for('bay_9_hum') }}">Multiple night-shift accounts describe the same unexplained hum near Bay 9. Facilities has not commented.</a></p>
     </div>
     <div class="rumor-item">
       <span class="tag-lvl">PERSISTENT</span>
-      <p><a href="#">The long-running theory that the building has a "quietest corner" continues to circulate among veteran staff.</a></p>
+      <p><a href="{{ url_for('quietest_corner') }}">The long-running theory that the building has a "quietest corner" continues to circulate among veteran staff.</a></p>
     </div>
     <div class="rumor-item">
       <span class="tag-lvl">JUST IN</span>
-      <p><a href="#">Whispers of a redesigned staff entrance are making the rounds — we're watching this one closely.</a></p>
+      <p><a href="{{ url_for('staff_entrance_redesign') }}">Whispers of a redesigned staff entrance are making the rounds — we're watching this one closely.</a></p>
     </div>
   </div>
 
@@ -145,19 +145,19 @@
   <div class="grid">
     <div class="card">
       <div class="cat">Spotted</div>
-      <h3><a href="#">Regional Exec Seen Touring the Floor Twice in One Week</a></h3>
+      <h3><a href="{{ url_for('regional_exec_visit') }}">Regional Exec Seen Touring the Floor Twice in One Week</a></h3>
       <p>No word yet on what prompted the visits, but the timing hasn't gone unnoticed.</p>
       <div class="byline">Reader Submission</div>
     </div>
     <div class="card">
       <div class="cat">Spotted</div>
-      <h3><a href="#">Unusual Truck Livery Photographed at the South Docks</a></h3>
+      <h3><a href="{{ url_for('unusual_truck_livery') }}">Unusual Truck Livery Photographed at the South Docks</a></h3>
       <p>A reader's photo has the comment section speculating about a new logistics partner.</p>
       <div class="byline">Reader Submission</div>
     </div>
     <div class="card">
       <div class="cat">Spotted</div>
-      <h3><a href="#">Mystery Visitor Badge Colour Sparks Curiosity</a></h3>
+      <h3><a href="{{ url_for('mystery_badge_colour') }}">Mystery Visitor Badge Colour Sparks Curiosity</a></h3>
       <p>A new badge colour in circulation has staff asking questions no one seems ready to answer.</p>
       <div class="byline">Reader Submission</div>
     </div>
