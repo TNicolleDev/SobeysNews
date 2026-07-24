@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Merch Store — Dock 8265</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/merch.css') }}">
+</head>
+<body>
+
+<header>
+  <div class="masthead">
+    <div class="logo-block">
+      <h1>DOCK <span>8265</span></h1>
+      <div class="logo-sub">The independent record of the David Sobey Retail Support Centre</div>
+    </div>
+    <div class="manifest-id">
+      VOL. 4 · ISSUE 112<br>
+      8265 Huntington Rd, Vaughan ON<br>
+      500,000 SQ FT · FULLY AUTOMATED
+    </div>
+  </div>
+  <nav>
+    <a href="/#news">News</a>
+    <a href="/#drama">Dock Drama</a>
+    <a href="/#rumors">Rumor Mill</a>
+    <a href="/#sightings">Sightings</a>
+    <a href="/#about">About the Beat</a>
+  </nav>
+</header>
+
+<main class="merch-wrap">
+
+  <div class="merch-head">
+    <span class="article-tag">Now Shipping</span>
+    <h2>Merch Store</h2>
+    <p class="dek">Official (unofficial) Dock 8265 plushies, stitched in honor of the floor's finest characters. Every order is made to spec — because no two shifts are ever quite the same.</p>
+  </div>
+
+  <div class="merch-grid">
+
+    <div class="merch-card">
+      <img src="{{ url_for('static', filename='images/merch/GulioPlushie.jpg') }}" alt="Lazy Gulio Plushie">
+      <div class="merch-body">
+        <div class="cat">Custom Order</div>
+        <h3>Lazy Gulio Plushie</h3>
+        <p>Permanently horizontal, endlessly relaxed. This plushie captures Gulio in his most natural state: fully reclined, completely unbothered, and somehow still on the clock.</p>
+      </div>
+    </div>
+
+    <div class="merch-card">
+      <img src="{{ url_for('static', filename='images/merch/CraigPlushies.jpg') }}" alt="Custom Craig Plushies">
+      <div class="merch-body">
+        <div class="cat">Custom Order</div>
+        <h3>Custom Craig Plushies</h3>
+        <p>One Craig was never going to be enough. Available in a full lineup of expressions and outfits — mix, match, and collect the whole shift's worth.</p>
+      </div>
+    </div>
+
+    <div class="merch-card">
+      <img src="{{ url_for('static', filename='images/merch/EnzoPlushie.jpg') }}" alt="Angry TL Enzo Plushie">
+      <div class="merch-body">
+        <div class="cat">Custom Order</div>
+        <h3>Angry TL Enzo Plushie</h3>
+        <p>Furrowed brow, arms crossed, radiating quiet managerial disappointment. For anyone who's ever needed a stand-in for a stern talking-to.</p>
+      </div>
+    </div>
+
+    <div class="merch-card">
+      <img src="{{ url_for('static', filename='images/merch/SobeysPlushies.jpg') }}" alt="Great stress relieving plushies">
+      <div class="merch-body">
+        <div class="cat">Custom Order</div>
+        <h3>Stress Relief Plushie Set</h3>
+        <p>Built for the tough shifts. Soft, squeezable, and here for you when the conveyor jams and the day just won't quit.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="merch-note">All plushies are made to order — reach out to request a custom character, size, or outfit.</p>
+
+</main>
+
+<footer id="about">
+  <div class="foot-top">
+    <div><strong>DOCK 8265</strong><br>Independent coverage of 8265 Huntington Road, Vaughan, Ontario.</div>
+    <div>Have a tip from the floor?<br>Submissions are reviewed before publication.</div>
+    <div>Not affiliated with Sobeys Inc.<br>All stories for editorial and entertainment purposes.</div>
+  </div>
+  <div>© 2026 Dock 8265 Dispatch. All rights reserved.</div>
+</footer>
+
+</body>
+</html>

@@ -76,3 +76,7 @@ def unusual_truck_livery():
 def mystery_badge_colour():
     return render_template("mystery-badge-colour.html")
 
+@app.route("/merch")
+def merch():
+    return render_template("merch.html")
+
