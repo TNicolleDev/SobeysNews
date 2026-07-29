@@ -12,24 +12,9 @@
 <body>
 
 <header>
-  <div class="masthead">
-    <div class="logo-block">
-      <h1>DOCK <span>8265</span></h1>
-      <div class="logo-sub">The independent record of the David Sobey Retail Support Centre</div>
-    </div>
-    <div class="manifest-id">
-      VOL. 4 · ISSUE 112<br>
-      8265 Huntington Rd, Vaughan ON<br>
-      500,000 SQ FT · FULLY AUTOMATED
-    </div>
-  </div>
-  <nav>
-    <a href="/#news">News</a>
-    <a href="/#drama">Dock Drama</a>
-    <a href="/#rumors">Rumor Mill</a>
-    <a href="/#sightings">Sightings</a>
-    <a href="/#about">About the Beat</a>
-  </nav>
+  {% include "includes/masthead.html" %}
+  {% include "includes/navbar.html" %}
+  
 </header>
 
 <main class="merch-wrap">
@@ -78,19 +63,55 @@
       </div>
     </div>
 
+    <!-- Super Friendly Supervisor -->
+<div class="merch-card">
+  <img src="{{ url_for('static', filename='images/merch/LaingPlushie.jpg') }}" alt="Super Friendly Supervisor Plushie">
+  <div class="merch-body">
+    <div class="cat">Custom Order</div>
+    <h3>Super Friendly Supervisor Plushie</h3>
+    <p>Equipped with reflective shades for that signature style and a gold watch that counts down to social hour. A true connoisseur of charm, he's always ready with a compliment or an encouraging word—and is famously a favorite among the female employees.</p>
   </div>
+</div>
+
+
+<!-- Best New Hire -->
+<div class="merch-card">
+  <img src="{{ url_for('static', filename='images/merch/NewHirePlushie.jpg') }}" alt="Best New Hire Plushie">
+  <div class="merch-body">
+    <div class="cat">Custom Order</div>
+    <h3>Best New Hire Plushie</h3>
+    <p>Bright-eyed, fully certified, and holding an empty checklist with pristine enthusiasm. Enjoy him now—give it three months on the night shift before he turns into a Lazy Gulio Plushie.</p>
+  </div>
+</div>
+
+<!-- Ex-Union Steward -->
+<div class="merch-card">
+  <img src="{{ url_for('static', filename='images/merch/ExStewardBobbyPlushie.jpg') }}" alt="Ex-Union Steward Plushie">
+  <div class="merch-body">
+    <div class="cat">Custom Order</div>
+    <h3>Ex-Union Steward Plushie (Local 419)</h3>
+    <p>Features a permanent scowl, a faded Local 419 patch, and a copy of the Final Collective Agreement. Guaranteed to cite three safety violations the second you take him out of the box.</p>
+  </div>
+</div>
+
+<!-- Least Eligible Bachelor -->
+<div class="merch-card">
+  <img src="{{ url_for('static', filename='images/merch/BachelorPlushie.jpg') }}" alt="Least Eligible Bachelor Plushie">
+  <div class="merch-body">
+    <div class="cat">Custom Order</div>
+    <h3>Least Eligible Bachelor Plushie</h3>
+    <p>Running the shift with a clip-board full of authority and a dating app profile that hasn't seen a match since 2019. Complete with a Shift Manager badge, an impressive collection of date night red flags, and absolute confidence that his big promotion is just around the corner.</p>
+  </div>
+</div>
+
+</div>
 
   <p class="merch-note">All plushies are made to order — reach out to request a custom character, size, or outfit.</p>
 
 </main>
 
 <footer id="about">
-  <div class="foot-top">
-    <div><strong>DOCK 8265</strong><br>Independent coverage of 8265 Huntington Road, Vaughan, Ontario.</div>
-    <div>Have a tip from the floor?<br>Submissions are reviewed before publication.</div>
-    <div>Not affiliated with Sobeys Inc.<br>All stories for editorial and entertainment purposes.</div>
-  </div>
-  <div>© 2026 Dock 8265 Dispatch. All rights reserved.</div>
+  {% include "includes/footer.html" %}
 </footer>
 
 </body>

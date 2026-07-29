@@ -1,0 +1,60 @@
+{% extends "bases/base_story.html" %}
+{% block story %}
+<div class="article-wrap">
+  <div class="article-head">
+    <div class="breadcrumb"><a href="{{url_for("home")}}">Home</a> / <a href="{{url_for("home")}}">News</a> / Picket Line Politics</div>
+    <span class="article-tag">Labor Report</span>
+    <h1>"Population Growing": Warehouse Scab Numbers Surge as Striking Workers Turn to Creative Side Hustles</h1>
+    <p class="dek">As replacement worker counts reach record highs at the facility, Teamsters Local 419 members are resorting to makeshift fundraisers on the picket line to make ends meet.</p>
+    <div class="byline-row">
+      <span>Staff Report</span>
+      <span>Filed Today · 4 min read</span>
+    </div>
+  </div>
+
+  <div class="article-body">
+    <p>Tensions outside the warehouse gates reached a new peak this week as the headcount of replacement workers continuing to cross the picket line hit an all-time high. Striking employees have taken notice, marking the growing tally on makeshift signs stationed along the roadside.</p>
+
+    <p>With strike pay stretched thin and monthly household bills piling up, members of Teamsters Local 419 are having to get creative just to stay afloat while holding the line.</p>
+
+    <div class="pullquote">
+      "The headcount inside keeps climbing, but so does our resolve. If we have to sell dollar kisses and Hershey's Kisses on the sidewalk to pay our bills, that's exactly what we'll do."
+      <span>— Striking Warehouse Worker, Teamsters Local 419</span>
+    </div>
+
+    <figure class="article-figure">
+      <img src="{{url_for('static', filename="images/stories/strike/WelcomeToScabville.jpg")}}" alt="Handmade sign along the curb reading Welcome to Scabville Population 35">
+      <figcaption>A hand-painted sign posted near the main entrance tracks the growing number of replacement workers operating inside the facility.</figcaption>
+    </figure>
+
+    <p>Opposite the growing "Scabville" headcounts, strikers have set up makeshift booths along the perimeter sidewalk. Among the most notable additions is a hastily constructed plywood and tarp "Kissing Booth," where workers are accepting small donations and selling chocolate treats for charity and personal relief funds.</p>
+
+    <figure class="article-figure">
+      <img src="{{url_for('static', filename="images/stories/strike/KissingBooth.jpg")}}" alt="Teamsters Local 419 striking workers' makeshift kissing booth made of plywood and blue tarps">
+      <figcaption>Union members assemble a makeshift booth outside the warehouse gates to help raise funds during the extended strike.</figcaption>
+    </figure>
+
+    <p>While management maintains that warehouse operations remain on track with replacement staff, union members say the humorous and desperate measures outside highlight the real economic strain being placed on long-term workers demanding fair pay.</p>
+
+    <div class="status-cards">
+      <div class="status-card">
+        <div class="label">Reported Scab Count</div>
+        <div class="value">35 and rising</div>
+      </div>
+      <div class="status-card">
+        <div class="label">Picket Line Morale</div>
+        <div class="value">Resourceful, holding firm</div>
+      </div>
+    </div>
+
+    <p>Local supporters have been encouraged to drop by the picket line to show solidarity, grab a Hershey's Kiss, or help support the strike relief fund as contract negotiations remain stalled.</p>
+
+    <div class="tags-row">
+      <span class="tag-chip">Teamsters 419</span>
+      <span class="tag-chip">Scabville</span>
+      <span class="tag-chip">Warehouse Strike</span>
+      <span class="tag-chip">Picket Line</span>
+    </div>
+  </div>
+</div>
+{% endblock %}

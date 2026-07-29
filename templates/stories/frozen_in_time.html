@@ -1,41 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>"Frozen in Time": TL Describes Ernest and Orlando's Extended Phone Stare — Dock 8265</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../static/css/home.css">
-<link rel="stylesheet" href="../static/css/frozen.css">
-</head>
-<body>
-
-<header>
-  <div class="masthead">
-    <div class="logo-block">
-      <h1>DOCK <span>8265</span></h1>
-      <div class="logo-sub">The independent record of the David Sobey Retail Support Centre</div>
-    </div>
-    <div class="manifest-id">
-      VOL. 4 · ISSUE 112<br>
-      8265 Huntington Rd, Vaughan ON<br>
-      500,000 SQ FT · FULLY AUTOMATED
-    </div>
-  </div>
-  <nav>
-    <a href="{{url_for('home')}}">News</a>
-    <a href="#">Dock Drama</a>
-    <a href="#">Rumor Mill</a>
-    <a href="#">Sightings</a>
-    <a href="#">About the Beat</a>
-  </nav>
-</header>
-
+{% extends "bases/base_story.html" %}
+{% block story %}
 <div class="article-wrap">
-
   <div class="article-head">
-    <div class="breadcrumb"><a href="home.html">Home</a> / <a href="#">Dock Drama</a> / Frozen in Time</div>
+    <div class="breadcrumb"><a href="{{url_for("home")}}">Home</a> / <a href="{{url_for("home")}}">News</a> / Frozen in Time</div>
     <span class="article-tag">Dock Drama</span>
     <h1>"Frozen in Time": TL Describes Ernest and Orlando's Extended Phone Stare on the Floor</h1>
     <p class="dek">Two names are circulating on the floor this week after a team lead's offhand comment turned a routine observation into the building's newest running story.</p>
@@ -56,7 +23,7 @@
     </div>
 
     <figure class="article-figure">
-      <img src="../static/images/OrlandoFrozen.jpeg" alt="Ernest and Orlando standing on the floor, both looking down at their phones">
+      <img src="{{url_for('static', filename="images/stories/frozen/OrlandoFrozen.jpeg")}}" alt="Ernest and Orlando standing on the floor, both looking down at their phones">
       <figcaption>Ernest (left) and Orlando (right), photographed on the floor shortly before the incident described above.</figcaption>
     </figure>
 
@@ -84,26 +51,6 @@
       <span class="tag-chip">Team Lead Quote</span>
     </div>
   </div>
-
-  <div class="related">
-    <h2>More Dock Drama</h2>
-    <ul class="related-list">
-      <li><a href="#">The Great Break Room Fridge Standoff Enters Week Three</a></li>
-      <li><a href="#">Two Supervisors, One Whiteboard: The Schedule Dispute No One Will Explain</a></li>
-      <li><a href="#">Who Approved the New Parking Layout? No One Is Owning Up</a></li>
-    </ul>
-  </div>
-
 </div>
+{% endblock %}
 
-<footer id="about">
-  <div class="foot-top">
-    <div><strong>DOCK 8265</strong><br>Independent coverage of 8265 Huntington Road, Vaughan, Ontario.</div>
-    <div>Have a tip from the floor?<br>Submissions are reviewed before publication.</div>
-    <div>Not affiliated with Sobeys Inc.<br>All stories for editorial and entertainment purposes.</div>
-  </div>
-  <div>© 2026 Dock 8265 Dispatch. All rights reserved.</div>
-</footer>
-
-</body>
-</html>
