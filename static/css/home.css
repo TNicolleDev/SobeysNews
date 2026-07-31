@@ -84,6 +84,28 @@
   }
   nav a:hover{color:var(--safety-yellow); border-color:var(--safety-yellow);}
 
+  .nav_merch{
+    margin-top:20px;
+    display:flex;
+    gap:26px;
+    flex-wrap:wrap;
+    padding-top:14px;
+  }
+
+  .nav_merch a{
+    font-family:'Oswald', sans-serif;
+    font-size:0.85rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:rgb(0, 0, 0);
+    padding-bottom:4px;
+    transition:border-color .15s ease, color .15s ease;
+    color:var(rgb(0, 0, 0)); border-color:var(rgb(0, 0, 0));
+  }
+  .nav_merch a:hover{
+    color:var(--safety-yellow); border-color:var(--safety-yellow);
+  }
+
   /* ===== ticker board (signature element) ===== */
   .ticker-wrap{
     background:var(--ink);

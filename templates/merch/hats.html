@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Merch Store — Dock 8265</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/merch.css') }}">
+</head>
+<body>
+
+<header>
+  {% include "includes/masthead.html" %}
+  {% include "includes/navbar.html" %}
+  
+</header>
+
+<main class="merch-wrap">
+
+  <div class="merch-head">
+    <span class="article-tag">Now Shipping</span>
+    <h2>Merch Store</h2>
+    <p class="dek">Official (unofficial) Dock 8265 hats, designed to keep you cool and stylish. Every order is made to spec — because no two shifts are ever quite the same.</p>
+    {% include "includes/navbar_merch.html" %}
+  </div>
+  
+  <div class="merch-grid">
+    
+    <div class="merch-card">
+      <img src="{{ url_for('static', filename='images/merch/hats/BumbaclotHat.jpg') }}" alt="Bumbaclot Hat">
+      <div class="merch-body">
+        <div class="cat">Custom Order</div>
+        <h3>Bumbaclot Hat</h3>
+        <p>This hat is 100% safe for work. This hat literally can't be banned.. now imagine everyone wearing it.</p>
+      </div>
+    </div>
+
+    <div class="merch-card">
+      <img src="{{ url_for('static', filename='images/merch/hats/ClerkinHat.jpg') }}" alt="Clerkin Hat">
+      <div class="merch-body">
+        <div class="cat">Custom Order</div>
+        <h3>Clerkin Hat</h3>
+        <p>"I've only done overtime twice, and both times it was clerkin" - Some Employee.</p>
+      </div>
+    </div>
+
+    <div class="merch-card">
+      <img src="{{ url_for('static', filename='images/merch/hats/LaingNotHereHat.jpg') }}" alt="Laing Not Here Hat">
+      <div class="merch-body">
+        <div class="cat">Custom Order</div>
+        <h3>Laing Not Here Hat</h3>
+        <p>Let your coworkers know that when you see them messing around, that they are lucky. The best TL in the business isn't here and you are... with this hat.</p>
+      </div>
+    </div>
+
+    <div class="merch-card">
+      <img src="{{ url_for('static', filename='images/merch/hats/PineappleHat.jpg') }}" alt="Pineapple Hat">
+      <div class="merch-body">
+        <div class="cat">Custom Order</div>
+        <h3>Pineapple Hat</h3>
+        <p>If you know you know.</p>
+      </div>
+    </div>
+
+    <div class="merch-card">
+      <img src="{{ url_for('static', filename='images/merch/hats/PepperoniHat.jpg') }}" alt="Pepperoni Hat">
+      <div class="merch-body">
+        <div class="cat">Custom Order</div>
+        <h3>Pepperoni Hat</h3>
+        <p>A greasy hat for a greasy pizza lover. Looks delicious!</p>
+      </div>
+    </div>
+
+    <div class="merch-card">
+      <img src="{{ url_for('static', filename='images/merch/hats/ScabHat.jpg') }}" alt="Scab Hat">
+      <div class="merch-body">
+        <div class="cat">Custom Order</div>
+        <h3>Scab Hat</h3>
+        <p>Great Xmas gift idea!</p>
+      </div>
+    </div>
+
+    <div class="merch-card">
+      <img src="{{ url_for('static', filename='images/merch/hats/StraightMilkageHat.jpg') }}" alt="Scab Hat">
+      <div class="merch-body">
+        <div class="cat">Custom Order</div>
+        <h3>Milkage Hat</h3>
+        <p>You don't care who knows how much work you do, you're milking it, and you're damn proud!</p>
+      </div>
+    </div>
+
+    <div class="merch-card">
+      <img src="{{ url_for('static', filename='images/merch/hats/SuperDuperVisorHat.jpg') }}" alt="Scab Hat">
+      <div class="merch-body">
+        <div class="cat">Custom Order</div>
+        <h3>Super Duper Visor Hat</h3>
+        <p>Assert your dominance over the other TLs as if they were floor employees, only the most alpha TLs would wear this hat. Not you because you're not him.</p>
+      </div>
+    </div>
+
+    
+
+</div>
+
+  <p class="merch-note">All hats are made to order — reach out to request a custom size, color, or design.</p>
+
+</main>
+
+<footer id="about">
+  {% include "includes/footer.html" %}
+</footer>
+
+</body>
+</html>
