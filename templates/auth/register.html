@@ -1,0 +1,32 @@
+{% extends 'bases/base_auth.html' %}
+
+{% block title %}Register{% endblock %}
+
+{% block content %}
+<section class="auth-wrap">
+  <div class="hazard"></div>
+
+  <div class="auth-card">
+    <span class="hero-tag">New Badge</span>
+    <h2>Dock Registration</h2>
+    <p class="auth-sub">Sign up for dock access. Choose your credentials below.</p>
+
+    <form method="post" class="auth-form">
+      <label for="username">Worker ID / Username</label>
+      <input type="text" name="username" id="username" required autofocus>
+
+      <label for="password">Access Code / Password</label>
+      <input type="password" name="password" id="password" required>
+
+      <button type="submit" class="btn-primary">Register →</button>
+    </form>
+
+    <div class="auth-foot">
+      <span>Already have a badge?</span>
+      <a href="{{ url_for('auth.login') }}">Log in here</a>
+      <span>Don't care about private content?</span>
+      <a href="{{url_for('home')}}">Send me back</a>
+    </div>
+  </div>
+</section>
+{% endblock %}

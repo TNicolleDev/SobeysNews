@@ -1,9 +1,11 @@
 from flask import Blueprint, render_template
+from blueprints.auth import login_required
 
 
 stories_bp = Blueprint('stories',__name__,url_prefix='/stories')
 
 @stories_bp.route("/frozen")
+@login_required
 def frozen_in_time():
    return render_template("stories/frozen_in_time.html")
 

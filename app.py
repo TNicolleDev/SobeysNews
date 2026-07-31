@@ -3,6 +3,7 @@ from flask import Flask
 from flask import render_template
 from blueprints.stories import stories_bp
 from blueprints.merch import merch_bp
+from blueprints.auth import auth_bp
 import db
 
 # create an instance of this class. 
@@ -12,7 +13,8 @@ import db
 app = Flask(__name__)
 
 app.config.from_mapping(
-   DATABASE='sobeysnews.sqlite3'
+   DATABASE='sobeysnews.sqlite3',
+   SECRET_KEY='DEV'
 )
 
 # We then use the route() decorator to tell Flask what URL should trigger our function.
@@ -22,6 +24,7 @@ def home():
 
 app.register_blueprint(stories_bp)
 app.register_blueprint(merch_bp)
+app.register_blueprint(auth_bp)
 
 db.init_app(app)
 

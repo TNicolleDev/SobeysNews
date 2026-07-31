@@ -10,3 +10,11 @@ def plushies():
 @merch_bp.route("/hats")
 def hats():
     return render_template("merch/hats.html")
+
+@merch_bp.route("/tshirts")
+def tshirts():
+    return render_template("merch/tshirts.html")
+
+@merch_bp.route("/accessories")
+def accessories():
+    return render_template("merch/accessories.html")

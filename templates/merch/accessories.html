@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Merch Store — Dock 8265</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/merch.css') }}">
+</head>
+<body>
+
+<header>
+  {% include "includes/masthead.html" %}
+  {% include "includes/navbar.html" %}
+  
+</header>
+
+<main class="merch-wrap">
+
+  <div class="merch-head">
+    <span class="article-tag">Now Shipping</span>
+    <h2>Merch Store</h2>
+    <p class="dek">Dock 8265 extras, made for the folks who accessorize their overtime.</p>
+    {% include "includes/navbar_merch.html" %}
+  </div>
+  
+  <div class="merch-grid">
+    
+    <div class="merch-card">
+      <img src="{{ url_for('static', filename='images/merch/accessories/WhineStopper.jpg') }}" alt="Bumbaclot Hat">
+      <div class="merch-body">
+        <div class="cat">Custom Order</div>
+        <h3>Whine Stopper Pacifier</h3>
+        <p>Can be attached directly to the forklift. Next time a TL tell you to suck it up and do your job, you can tell them YES SIR with the Dock 8265 Whine Stopper Pacifier.</p>
+      </div>
+    </div>
+
+    <div class="merch-card">
+      <img src="{{ url_for('static', filename='images/merch/accessories/PissJug.jpg') }}" alt="Bumbaclot Hat">
+      <div class="merch-body">
+        <div class="cat">Custom Order</div>
+        <h3>Portable Urine Holder</h3>
+        <p>Having trouble hitting the KPI's with your extremely small bladder? This portable urine receptacle can be attached directly inside your forklift driving compartment.</p>
+      </div>
+    </div>
+
+   
+
+</div>
+
+  <p class="merch-note">All hats are made to order — reach out to request a custom size, color, or design.</p>
+
+</main>
+
+<footer id="about">
+  {% include "includes/footer.html" %}
+</footer>
+
+</body>
+</html>

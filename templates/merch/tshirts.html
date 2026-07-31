@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Merch Store — Dock 8265</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/merch.css') }}">
+</head>
+<body>
+
+<header>
+  {% include "includes/masthead.html" %}
+  {% include "includes/navbar.html" %}
+</header>
+
+<main class="merch-wrap">
+
+  <div class="merch-head">
+    <span class="article-tag">Now Shipping</span>
+    <h2>Merch Store</h2>
+    <p class="dek">Official (unofficial) Dock 8265 tees, printed in honor of the floor's finest characters. Every order is made to spec — because no two shifts are ever quite the same.</p>
+    {% include "includes/navbar_merch.html" %}
+  </div>
+
+  <div class="merch-grid">
+
+    <div class="merch-card">
+      <img src="{{ url_for('static', filename='images/merch/tshirts/EssentialWorker.jpg') }}" alt="Essential Worker Tee">
+      <div class="merch-body">
+        <div class="cat">Custom Order</div>
+        <h3>Essential Worker Tee</h3>
+        <p>Remember the good ol' days during the pandemic that you were a Hero, and not just a number.</p>
+      </div>
+    </div>
+
+    <div class="merch-card">
+      <img src="{{ url_for('static', filename='images/merch/tshirts/InterruptingYoutube.jpg') }}" alt="Interrupting YouTube Tee">
+      <div class="merch-body">
+        <div class="cat">Custom Order</div>
+        <h3>Interrupting YouTube Tee</h3>
+        <p>A favorite amongst clerks, dispatchers, IC, and most office staff.</p>
+      </div>
+    </div>
+
+    <div class="merch-card">
+      <img src="{{ url_for('static', filename='images/merch/tshirts/MandatoryOT.jpg') }}" alt="Mandatory OT Tee">
+      <div class="merch-body">
+        <div class="cat">Custom Order</div>
+        <h3>Mandatory OT Tee</h3>
+        <p>No one likes doing OT, so that's we made it mandatory. Remember the companies needs are always more important than yours.</p>
+      </div>
+    </div>
+
+    <div class="merch-card">
+      <img src="{{ url_for('static', filename='images/merch/tshirts/SeniorityIQ.jpg') }}" alt="Seniority IQ Tee">
+      <div class="merch-body">
+        <div class="cat">Custom Order</div>
+        <h3>Seniority IQ Tee</h3>
+        <p>Easy math. You've been here longer. You know the job better. That's why you get all the choice.</p>
+      </div>
+    </div>
+
+    <div class="merch-card">
+      <img src="{{ url_for('static', filename='images/merch/tshirts/StraightMilkageShirt.jpg') }}" alt="Straight Mileage Tee">
+      <div class="merch-body">
+        <div class="cat">Custom Order</div>
+        <h3>Straight Milkage Tee</h3>
+        <p>You don't have a care in the world about quota's or KPI's. Now its time for a pee break.</p>
+      </div>
+    </div>
+
+    <div class="merch-card">
+      <img src="{{ url_for('static', filename='images/merch/tshirts/TalkWashroomBreak.jpg') }}" alt="Washroom Break Tee">
+      <div class="merch-body">
+        <div class="cat">Custom Order</div>
+        <h3>Washroom Break Tee</h3>
+        <p>"What I can't use the washroom now?! That's a greivance"</p>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="merch-note">All tshirts are made to order — reach out to request a custom size, color, or design.</p>
+
+</main>
+
+<footer id="about">
+  {% include "includes/footer.html" %}
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+{% extends 'bases/base_auth.html' %}
+
+{% block title %}Log In{% endblock %}
+
+{% block content %}
+<section class="auth-wrap">
+  <div class="hazard"></div>
+
+  <div class="auth-card">
+    <span class="hero-tag">Access Point</span>
+    <h2>Dock Login</h2>
+    <p class="auth-sub">Authorized personnel only. Present credentials below.</p>
+
+    <form method="post" class="auth-form">
+      <label for="username">Worker ID / Username</label>
+      <input type="text" name="username" id="username" required autofocus>
+
+      <label for="password">Access Code / Password</label>
+      <input type="password" name="password" id="password" required>
+
+      <button type="submit" class="btn-primary">Clock In →</button>
+    </form>
+
+    <div class="auth-foot">
+      <span>No badge yet?</span>
+      <a href="{{ url_for('auth.register') }}">Register at the gate</a>
+      <span>Don't care about private content?</span>
+      <a href="{{url_for('home')}}">Send me back</a>
+    </div>
+  </div>
+</section>
+{% endblock %}

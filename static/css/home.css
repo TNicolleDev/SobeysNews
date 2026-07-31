@@ -308,3 +308,12 @@
   letter-spacing:0.05em;
   margin-top:8px;
 }
+.site-nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.nav-left, .nav-right{
+  display:flex;
+  gap:18px;
+}
