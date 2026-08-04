@@ -14,5 +14,6 @@ def strike_booth():
    return render_template("stories/strike_booth.html")
 
 @stories_bp.route("/std")
+@login_required
 def std():
    return render_template('/stories/short_term_disability.html')
