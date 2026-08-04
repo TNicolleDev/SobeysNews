@@ -17,9 +17,55 @@
 </header>
 
 <main>
-{% block story%}
-{% endblock %}
- 
+<div class="article-wrap">
+  <div class="article-head">
+    <div class="breadcrumb"><a href="{{url_for("home")}}">Home</a> / <a href="{{url_for("home")}}">News</a> / {% block breadcrumb %}{% endblock %}</div>
+    <span class="article-tag">{% block article_tag %}{% endblock %}</span>
+    <h1>{% block title%}{% endblock %}</h1>
+    <p class="dek">{% block summary %}{% endblock %}</p>
+    <div class="byline-row">
+      <span>Dock 8265 Exclusive</span>
+      <span>{% block publish_date %}{% endblock %}</span>
+    </div>
+  </div>
+
+  <div class="article-body">
+    <p>{% block story_1 %}{% endblock %}</p>
+
+    <p>{% block story_2 %}{% endblock %}</p>
+
+    <div class="pullquote">
+      {% block pull_quote %}{% endblock %}
+      <span>-- {% block person_quoting %}{% endblock %} --</span>
+    </div>
+
+    <figure class="article-figure">
+      {% block image %}{% endblock %}
+      <figcaption>{% block image_caption %}{% endblock %}</figcaption>
+    </figure>
+
+    <p>{% block story_3 %}{% endblock %}</p>
+
+
+    <figure class="article-figure">
+      {% block image_2 %}{% endblock %}
+      <figcaption>{% block image_caption_2 %}{% endblock %}</figcaption>
+    </figure>
+
+    <p>{% block story_4 %}{% endblock %}</p>
+
+  
+
+    <p>{% block story_5 %}{% endblock %}</p>
+
+    <div class="tags-row">
+      <span class="tag-chip">{% block tag_1 %}{% endblock %}</span>
+      <span class="tag-chip">{% block tag_2 %}{% endblock %}</span>
+      <span class="tag-chip">{% block tag_3 %}{% endblock %}</span>
+      <span class="tag-chip">{% block tag_4 %}{% endblock %}</span>
+    </div>
+  </div>
+</div>
 </main>
 
 <footer id="about">

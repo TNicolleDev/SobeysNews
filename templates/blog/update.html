@@ -1,0 +1,24 @@
+{% extends 'bases/base_blog.html' %}
+
+{% block content %}
+  <div class="blog-page-head">
+    <h1 class="blog-page-title">Edit "{{ post['title'] }}"</h1>
+  </div>
+
+  <form method="post" class="blog-form">
+    <label class="blog-label" for="title">Title</label>
+    <input class="blog-input" name="title" id="title"
+      value="{{ request.form['title'] or post['title'] }}" required>
+
+    <label class="blog-label" for="body">Body</label>
+    <textarea class="blog-textarea" name="body" id="body">{{ request.form['body'] or post['body'] }}</textarea>
+
+    <input class="blog-submit" type="submit" value="Save">
+  </form>
+
+  <hr class="blog-divider">
+
+  <form action="{{ url_for('blog.delete', id=post['id']) }}" method="post" class="blog-form">
+    <input class="blog-submit blog-submit-danger" type="submit" value="Delete" onclick="return confirm('Are you sure?');">
+  </form>
+{% endblock %}

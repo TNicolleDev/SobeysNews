@@ -12,3 +12,7 @@ def frozen_in_time():
 @stories_bp.route("/strike")
 def strike_booth():
    return render_template("stories/strike_booth.html")
+
+@stories_bp.route("/std")
+def std():
+   return render_template('/stories/short_term_disability.html')

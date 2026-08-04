@@ -4,6 +4,7 @@ from flask import render_template
 from blueprints.stories import stories_bp
 from blueprints.merch import merch_bp
 from blueprints.auth import auth_bp
+from blueprints.blog import blog_bp
 import db
 
 # create an instance of this class. 
@@ -25,6 +26,7 @@ def home():
 app.register_blueprint(stories_bp)
 app.register_blueprint(merch_bp)
 app.register_blueprint(auth_bp)
+app.register_blueprint(blog_bp)
 
 db.init_app(app)
 

@@ -1,56 +1,33 @@
 {% extends "bases/base_story.html" %}
-{% block story %}
-<div class="article-wrap">
-  <div class="article-head">
-    <div class="breadcrumb"><a href="{{url_for("home")}}">Home</a> / <a href="{{url_for("home")}}">News</a> / Frozen in Time</div>
-    <span class="article-tag">Dock Drama</span>
-    <h1>"Frozen in Time": TL Describes Ernest and Orlando's Extended Phone Stare on the Floor</h1>
-    <p class="dek">Two names are circulating on the floor this week after a team lead's offhand comment turned a routine observation into the building's newest running story.</p>
-    <div class="byline-row">
-      <span>Staff Report</span>
-      <span>Filed Today · 4 min read</span>
-    </div>
-  </div>
 
-  <div class="article-body">
-    <p>It started, as most things at Dock 8265 do, with someone noticing something and mentioning it to the wrong person at the wrong time. By midweek, it was the only thing anyone on the floor wanted to talk about.</p>
+{% block breadcrumb %}Frozen in Time{% endblock %}
+{% block article_tag %}Dock Drama{% endblock %}
+{% block title %}"Frozen in Time": TL Describes Ernest and Orlando's Extended Phone Stare on the Floor{% endblock %}
+{% block summary %}Two names are circulating on the floor this week after a team lead's offhand comment turned a routine observation into the building's newest running story.{% endblock %}
 
-    <p>According to multiple accounts, employees Ernest and Orlando were seen standing near the same station for what witnesses describe as an unusually long stretch, both looking down at their phones without moving. Coworkers say the pause was long enough to draw attention from passing staff, several of whom slowed down to see if something was actually wrong.</p>
+{% block publish_date %}Staff Report · Filed Today · 4 min read{% endblock %}
 
-    <div class="pullquote">
-      "They were frozen in time. I walked past twice and they hadn't moved an inch."
-      <span>— Team Lead, speaking to Dock 8265</span>
-    </div>
+{% block story_1 %}It started, as most things at Dock 8265 do, with someone noticing something and mentioning it to the wrong person at the wrong time. By midweek, it was the only thing anyone on the floor wanted to talk about.{% endblock %}
 
-    <figure class="article-figure">
-      <img src="{{url_for('static', filename="images/stories/frozen/OrlandoFrozen.jpeg")}}" alt="Ernest and Orlando standing on the floor, both looking down at their phones">
-      <figcaption>Ernest (left) and Orlando (right), photographed on the floor shortly before the incident described above.</figcaption>
-    </figure>
+{% block story_2 %}According to multiple accounts, employees Ernest and Orlando were seen standing near the same station for what witnesses describe as an unusually long stretch, both looking down at their phones without moving. Coworkers say the pause was long enough to draw attention from passing staff, several of whom slowed down to see if something was actually wrong.{% endblock %}
 
-    <p>The team lead's comment, made in passing, has since become the unofficial headline of the incident. Staff have adopted "frozen in time" as shorthand for the moment, and it's already being used well beyond its original context.</p>
+{% block pull_quote %}"They were frozen in time. I walked past twice and they hadn't moved an inch."{% endblock %}
+{% block person_quoting %}Team Lead, speaking to Dock 8265{% endblock %}
 
-    <p>Neither Ernest nor Orlando has issued a statement. Coworkers describe the two as otherwise reliable and unbothered by the attention, with one source noting that "they didn't even look up when people started talking about it," which, depending on who you ask, either undercuts or completely confirms the original report.</p>
+{% block image %}<img src="{{url_for('static', filename="images/stories/frozen/OrlandoFrozen.jpeg")}}" alt="Ernest and Orlando standing on the floor, both looking down at their phones">{% endblock %}
+{% block image_caption %}Ernest (left) and Orlando (right), photographed on the floor shortly before the incident described above.{% endblock %}
 
-    <div class="status-cards">
-      <div class="status-card">
-        <div class="label">Duration Reported</div>
-        <div class="value">Unconfirmed, described as "a while"</div>
-      </div>
-      <div class="status-card">
-        <div class="label">Current Status</div>
-        <div class="value">Both back on the floor, unmoved by the fame</div>
-      </div>
-    </div>
+{% block story_3 %}The team lead's comment, made in passing, has since become the unofficial headline of the incident. Staff have adopted "frozen in time" as shorthand for the moment, and it's already being used well beyond its original context.{% endblock %}
 
-    <p>Dock 8265 will continue to monitor the situation and update this story if either party decides to comment on the record, or if it happens again.</p>
+{% block image_2 %}{% endblock %}
+{% block image_caption_2 %}{% endblock %}
 
-    <div class="tags-row">
-      <span class="tag-chip">Floor Report</span>
-      <span class="tag-chip">Ernest</span>
-      <span class="tag-chip">Orlando</span>
-      <span class="tag-chip">Team Lead Quote</span>
-    </div>
-  </div>
-</div>
-{% endblock %}
+{% block story_4 %}Neither Ernest nor Orlando has issued a statement. Coworkers describe the two as otherwise reliable and unbothered by the attention, with one source noting that "they didn't even look up when people started talking about it," which, depending on who you ask, either undercuts or completely confirms the original report. Duration of the incident remains unconfirmed, described only as "a while," and both employees are back on the floor, unmoved by the fame.{% endblock %}
+
+{% block story_5 %}Dock 8265 will continue to monitor the situation and update this story if either party decides to comment on the record, or if it happens again.{% endblock %}
+
+{% block tag_1 %}Floor Report{% endblock %}
+{% block tag_2 %}Ernest{% endblock %}
+{% block tag_3 %}Orlando{% endblock %}
+{% block tag_4 %}Team Lead Quote{% endblock %}
 

@@ -1,0 +1,54 @@
+{% extends 'bases/base_blog.html' %}
+
+{% block content %}
+<h5>Disclaimer: All Posts are made by employees and not a representation of the views of Dock 8265.</h1>
+  <div class="blog-page-head">
+    <h1 class="blog-page-title">Posts</h1>
+    {% if g.user %}
+      <a class="blog-action" href="{{ url_for('blog.create') }}">New</a>
+    {% endif %}
+  </div>
+
+  {% for post in posts %}
+    <article class="blog-post" id="blog-post-{{ post['id'] }}">
+      <header class="blog-post-header">
+        <div>
+          <h2 class="blog-post-title">{{ post['title'] }}</h2>
+          <div class="blog-about">by {{ post['username'] }} on {{ post['created'].strftime('%Y-%m-%d') }}</div>
+        </div>
+        {% if g.user['id'] == post['author_id'] %}
+          <a class="blog-action" href="{{ url_for('blog.update', id=post['id']) }}">Edit</a>
+        {% endif %}
+      </header>
+      <p class="blog-post-body">{{ post['body'] }}</p>
+
+      <section class="blog-comments">
+        <h3 class="blog-comments-heading">Comments <span class="blog-comment-count">({{ post['comments']|length }})</span></h3>
+
+        {% for comment in post['comments'] %}
+          <div class="blog-comment">
+            <div class="blog-comment-meta">
+              <span class="blog-comment-user">{{ comment['username'] }}</span>
+              <span class="blog-comment-date">{{ comment['created'].strftime('%Y-%m-%d %H:%M') }}</span>
+            </div>
+            <p class="blog-comment-body">{{ comment['body'] }}</p>
+          </div>
+        {% else %}
+          <p class="blog-no-comments">No comments yet. Be the first to weigh in.</p>
+        {% endfor %}
+
+        {% if g.user %}
+          <form method="post" action="{{ url_for('blog.comment', post_id=post['id']) }}" class="blog-comment-form">
+            <textarea class="blog-comment-input" name="body" placeholder="Add a comment..." required></textarea>
+            <input class="blog-comment-submit" type="submit" value="Post Comment">
+          </form>
+        {% else %}
+          <p class="blog-comment-login-note"><a href="{{ url_for('auth.login') }}">Log in</a> to comment.</p>
+        {% endif %}
+      </section>
+    </article>
+    {% if not loop.last %}
+      <hr class="blog-divider">
+    {% endif %}
+  {% endfor %}
+{% endblock %}
