@@ -13,9 +13,13 @@ import db
 # This is needed so that Flask knows where to look for resources such as templates and static files.
 app = Flask(__name__)
 
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 app.config.from_mapping(
-   DATABASE='sobeysnews.sqlite3',
-   SECRET_KEY='DEV'
+    DATABASE=os.path.join(BASE_DIR, "sobeysnews.sqlite3"),
+    SECRET_KEY="DEV"
 )
 
 # We then use the route() decorator to tell Flask what URL should trigger our function.
