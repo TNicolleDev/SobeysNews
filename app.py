@@ -5,6 +5,7 @@ from blueprints.stories import stories_bp
 from blueprints.merch import merch_bp
 from blueprints.auth import auth_bp
 from blueprints.blog import blog_bp
+from blueprints.union import union_bp
 import db
 
 # create an instance of this class. 
@@ -31,6 +32,7 @@ app.register_blueprint(stories_bp)
 app.register_blueprint(merch_bp)
 app.register_blueprint(auth_bp)
 app.register_blueprint(blog_bp)
+app.register_blueprint(union_bp)
 
 db.init_app(app)
 

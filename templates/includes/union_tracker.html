@@ -1,0 +1,38 @@
+{% set total = union_for_count + union_against_count %}
+{% set for_pct = (union_for_count / total * 100) if total else 50 %}
+{% set against_pct = (union_against_count / total * 100) if total else 50 %}
+
+<div class="union-tracker">
+  <div class="union-tracker-head">
+    <h3 class="union-tracker-title">Where Does The Dock Stand?</h3>
+    <span class="union-tracker-total">{{ total }} vote{{ 's' if total != 1 else '' }} cast</span>
+  </div>
+
+  <div class="union-bar">
+    <div class="union-bar-for" style="width: {{ for_pct }}%;"></div>
+    <div class="union-bar-against" style="width: {{ against_pct }}%;"></div>
+  </div>
+
+  <div class="union-bar-labels">
+    <span class="union-label-for">For {{ "%.0f"|format(for_pct) }}%</span>
+    <span class="union-label-against">Against {{ "%.0f"|format(against_pct) }}%</span>
+  </div>
+
+  {% if g.user %}
+    <form method="post" action="{{ url_for('union.vote') }}" class="union-vote-form">
+      <button type="submit" name="stance" value="for"
+        class="union-vote-btn union-vote-for {{ 'union-vote-active' if union_user_vote == 'for' }}">
+        {{ 'You Voted For' if union_user_vote == 'for' else 'Vote For' }}
+      </button>
+      <button type="submit" name="stance" value="against"
+        class="union-vote-btn union-vote-against {{ 'union-vote-active' if union_user_vote == 'against' }}">
+        {{ 'You Voted Against' if union_user_vote == 'against' else 'Vote Against' }}
+      </button>
+    </form>
+    {% if union_user_vote %}
+      <p class="union-vote-note">Cast another vote above to change your stance.</p>
+    {% endif %}
+  {% else %}
+    <p class="union-vote-note"><a href="{{ url_for('auth.login') }}">Log in</a> to cast your vote.</p>
+  {% endif %}
+</div>
